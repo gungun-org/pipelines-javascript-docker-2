@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: gungunorgpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gungunorgpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: gungunorgpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: gungunorgpipelinesjavascriptdocker 
+          image: umeshcontainerregistry2.azurecr.io/gungunorgpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
